@@ -6,6 +6,10 @@ class Task:
         self.name = name
         self.priority = priority
 
+    def priority(self) -> int:
+        # Calculate the score for the tasks priority rank
+        return self.importance * 2 + self.urgency
+
     def __lt__(self, other):
         # Reverse comparison so the higher priority task comes first within the heap 
         return self.priority > other.priority
