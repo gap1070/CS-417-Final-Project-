@@ -1,6 +1,6 @@
 import heapq
 from typing import List, Optional
-from task import Task
+from .task import Task
 
 class TaskManager:
     # Creates empty list for tasks
@@ -15,7 +15,7 @@ class TaskManager:
     def get_next_task(self) -> Optional[Task]:
         if not self.tasks:
             return None 
-        return heapq.heappush(self.tasks)
+        return heapq.heappop(self.tasks)
     
     # Checks if task queue is empty 
     def is_empty(self) -> bool:
