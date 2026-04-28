@@ -2,6 +2,7 @@
 
 # Import the Task class from task.py
 from .task import Task 
+from .task_manager import TaskManager
 
 def main():
     # Starting Message 
