@@ -11,7 +11,7 @@ def main():
     # Example tasks 
     manager.add_task(Task("Homework", 5, 4))
     manager.add_task(Task("Workout", 3, 3))
-    manager.add_task(Task("Videgames", 2, 2))
+    manager.add_task(Task("Video games", 2, 2))
 
     # Makes sure to process the tasks in the right order 
     while not manager.is_empty():
