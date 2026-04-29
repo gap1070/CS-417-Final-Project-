@@ -38,7 +38,14 @@ def main():
             print("Task Added!")
 
         # Option 2: Get next highest priority task
+        elif choice == "2":
+            task = manager.get_next_task()
 
+            # Checks if there even is any tasks 
+            if task is None:
+                print("No task available.")
+            else:
+                print("Next Task:", task)
 
 
 # Runs the program 
