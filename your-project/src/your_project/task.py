@@ -16,5 +16,9 @@ class Task:
         return self.priority() > other.priority()
     
     def __repr__(self):
-        # Makes it so the printing tasks are easier to read 
+        # Makes it so the printing tasks are easier to read for debugging
         return f"Task({self.name}, imp={self.importance}, urg={self.urgency})"
+    
+    def __str__(self):
+        # Used for making the tasks print cleanly 
+        return f"{self.name}, imp={self.importance}, urg={self.urgency}"

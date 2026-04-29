@@ -24,4 +24,4 @@ class TaskManager:
     # Returns every task inputted sorted by priority rank (does not remove any tasks)
     def get_all_tasks(self) -> list[Task]:
         # Using sorted() because it doesn't chnage the original heap 
-        return sorted(self.tasks, reverse=True)
+        return sorted(self.tasks, key=lambda t: t.priority(), reverse=True)
