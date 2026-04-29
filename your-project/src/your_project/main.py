@@ -14,7 +14,8 @@ def main():
         print("\n=== Smart To-DO List ===")
         print("1. Add Task")
         print("2. Get Next Task")
-        print("3. Exit")
+        print("3. View All Tasks")
+        print("4. Exit")
 
         # Gets the users choice 
         choice = input("Choose an option: ")
@@ -46,9 +47,20 @@ def main():
                 print("No task available.")
             else:
                 print("Next Task:", task)
-
-        # Option 3: Exitting the program 
+            
+        # Option 3: View all the tasks in your heap
         elif choice == "3":
+            tasks = manager.get_all_tasks()
+
+            if not tasks:
+                print("No tasks available.")
+            else:
+                print("\nAll Tasks (by priority):")
+                for task in tasks:
+                    print(task)
+
+        # Option 4: Exitting the program 
+        elif choice == "4":
             print("Goodbye!")
             break
 
