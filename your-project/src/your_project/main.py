@@ -47,6 +47,15 @@ def main():
             else:
                 print("Next Task:", task)
 
+        # Option 3: Exitting the program 
+        elif choice == "3":
+            print("Goodbye!")
+            break
+
+        # If the user inputs an invalid choice 
+        else:
+            print("Invalid choice, try again.")
+
 
 # Runs the program 
 if __name__ == "__main__":
