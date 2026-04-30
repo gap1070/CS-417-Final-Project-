@@ -1,11 +1,16 @@
 # This file defines the Task class for the whole program
 
+# Used for tracking the time 
+from datetime import datetime 
+
 class Task:
     def __init__(self, name: str, importance: int, urgency: int):
         # Stores the task name and its priority 
         self.name = name
         self.importance = importance
         self.urgency = urgency
+        # Stores when the task was created, for smart priority 
+        self.created_at = datetime.now()
 
     def priority(self) -> int:
         # Calculate the score for the tasks priority rank
