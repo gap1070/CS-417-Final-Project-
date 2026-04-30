@@ -46,7 +46,9 @@ def main():
             if task is None:
                 print("No task available.")
             else:
-                print("Next Task:", task)
+                # Shows task along with its priority
+                print(f"Next Task: {task} (score: {task.priority()})")
+
             
         # Option 3: View all the tasks in your heap
         elif choice == "3":
