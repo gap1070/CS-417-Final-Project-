@@ -13,8 +13,14 @@ class Task:
         self.created_at = datetime.now()
 
     def priority(self) -> int:
-        # Calculate the score for the tasks priority rank
-        return self.importance * 2 + self.urgency
+        # The base score using importance and urgency 
+        base_score = self.importance * 2 + self.urgency
+
+        # Calculates how many days old a task is 
+        age_days = (datetime.now() - self.created_at).days 
+
+        # How older tasks slowly become higher and higher priority 
+        return base_score + age_days
 
     def __lt__(self, other):
         # Reverse comparison so the higher priority task comes first within the heap 
