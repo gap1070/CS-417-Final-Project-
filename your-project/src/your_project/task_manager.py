@@ -15,6 +15,11 @@ class TaskManager:
     def get_next_task(self) -> Optional[Task]:
         if not self.tasks:
             return None 
+        
+        # Rebuilds the heap since the prioritys get changed over time
+        heapq.heapify(self.tasks)
+
+        # Removes and returns the highest priority task 
         return heapq.heappop(self.tasks)
     
     # Checks if task queue is empty 
