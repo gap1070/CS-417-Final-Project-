@@ -20,7 +20,17 @@ Located in task_manager.py (in get_all_tasks)
 Uses pythons sorted() function in order to return all the tasks ordered by there priority, without having to modify the heap. 
 
 What's working 
+- Adding tasks with there importance and urgency 
+- The algorithm automatically calculating each tasks priority 
+- Retrieving the highest priority task 
+- Viewing every task the user inputted all at once, sorted by there priority 
+- Handles invalid numbers, and inputs without crashing
+- Handles the empty task lists correctly without crashing 
 
 Limitations
+- After you exit the program, your tasks do not get saved
+- No option to edit tasks, or delete them (automatically does when you retrieve the highest priority task)
+- In order to update the priority, the heap needs to be rebuilt 
+- Only runs in th command line (no special interface)
 
 Ai Usage 
