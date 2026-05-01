@@ -9,6 +9,15 @@ How to install dependencies and run it
 3. Finally, run the porgram using "python -m your_project"
 
 The data structures and algorithms I used 
+- Heap (priority queue)
+Located in task_manager.py
+This program uses pythons heapq in order to store the tasks in the heap. It does this so that the highest priority task out of all the tasks will be able to get retrieved easily, and efficiently. 
+- A custom priority algorithm 
+Located in task.py (the priority method)
+This algorithm taks each task and calculates its priority based on the importance, and urgency that the user inputted, also how old a task is. Older tasks slower become more important as the days go on. 
+- Sorting for the purpose of displaying 
+Located in task_manager.py (in get_all_tasks)
+Uses pythons sorted() function in order to return all the tasks ordered by there priority, without having to modify the heap. 
 
 What's working 
 
